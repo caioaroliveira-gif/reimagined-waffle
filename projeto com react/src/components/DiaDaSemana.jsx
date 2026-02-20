@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './DiadaSemana.css'
 function DiaDaSemana() {
     function verificarDia() {
         // let dia = Number(prompt("Digite o Dia da Semana em Nº: "))
@@ -30,7 +30,7 @@ function DiaDaSemana() {
     }
 
     return (
-        <div>
+        <div className={"container-dia"}>
             <h2>Dia da Semana</h2>
             <button onClick={verificarDia}>Verificar  dia</button>
         </div>
