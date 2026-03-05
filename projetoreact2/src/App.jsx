@@ -8,6 +8,7 @@ function App() {
 
   return (
     <>
+   
       <h1>Receba...</h1>
       <HarryPlotter />
       <Entrevista />

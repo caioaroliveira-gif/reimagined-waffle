@@ -1,20 +1,31 @@
-import React from 'react'
+import { useState } from 'react';
 
-function ver_tabuada() {
-    let impu_usuario = prompt("Digite seu número")
-    let tabuada = []
 
-    for (let i = 1; i < 11; i++) {
-        tabuada = impu_usuario * i
-       alert("Tabuado de " + impu_usuario + "\n" + impu_usuario + "X" + i  + "=" + tabuada + "\n")
-    }
- 
-}
 function Entrevista() {
+    const[tabuada, setTabuada] = useState([])
+    
+    function calcTabuada() {
+        let inputUser = Number(prompt("Digite o número da tabuada"));
+        let resultado;
+        let total = [];
+        
+        for (let i = 1; i <= 10; i++) {
+            resultado = inputUser * i;
+            total.push(`${inputUser} x ${i} = ${inputUser * i}`)
+            
+            
+        }
+
+        setTabuada(total)
+        
+    }
     return (
         <div>
             <h2>Tabuada</h2>
-            <button onClick={ver_tabuada}>Verificar</button>
+            <button onClick={calcTabuada} class="botaoP">Verificar</button>
+            {tabuada.map((item, index) => (
+                <p key={index}>{item}</p>
+            ))}
         </div>
     )
 }
