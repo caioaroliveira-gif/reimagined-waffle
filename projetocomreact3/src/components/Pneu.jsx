@@ -1,25 +1,28 @@
 import { useState } from "react";
 
 function Pneu() {
-    const [inputUserPneu, setInputUserPneu] = useState('')
-    const [inputDesejado, setInputDesejado] = useState('')
-    function bombaPneu() {
-        
-    }
+    const [pressaoDesejada, setPressaoDesejada] = useState('')
+    const [pressaoLida, setPressaoLida] = useState('')
+
+    const diferenca = pressaoDesejada - pressaoLida
+ 
     return (
         <div>
-            <h2>Bomba de Calibragem</h2>
-            <div className="input-atual" >Pressão do SEU Pneu <input type="number"
-            />
-            </div>
-
+            <h2>Bomba de Pressão</h2>
+            <input
+                type="number"
+                value={pressaoDesejada}
+                onChange={(evento) => setPressaoDesejada(Number(evento.target.value))}
+             /> Pressão Desejada
             <br />
+            <input
+                type="number"
+                value={pressaoLida}
+                onChange={(evento) => setPressaoLida(Number(evento.target.value))}
+             /> Pressão Lida
+            <br />
+            <p>Faltam {diferenca} de pressão. </p>
 
-            <div className="input-atual" > Pressão Desejada <input type="number"
-            />
-            </div>
-
-            <button onClick={bombaPneu}>Pressão</button>
         </div>
     )
 }

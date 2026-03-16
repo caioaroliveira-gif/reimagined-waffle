@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Evento from './components/Evento';
 import Pneu from './components/Pneu';
+import PapaiNoel from './components/PapaiNoel';
 
 function App() {
   const [InputNome, setInputNome] = useState('')
@@ -12,7 +13,8 @@ function App() {
   return (
     <>
       <h1>Inputs Controlados</h1>
-      Nome <input type="text" 
+      Nome <input 
+      type="text" 
       value={InputNome}
       onChange={(e) => setInputNome(e.target.value)} />
 
@@ -22,6 +24,8 @@ function App() {
       <Evento />
       <hr />
       <Pneu />
+      <hr />
+      <PapaiNoel />
     </>
   )
 }
