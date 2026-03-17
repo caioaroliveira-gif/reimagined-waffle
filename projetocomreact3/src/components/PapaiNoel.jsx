@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 function PapaiNoel() {
-    const [numeroSorteado, setNumeroSorteado] = useState(0)
+    const [numeroSorteado, setNumeroSorteado] = useState('')
     let frase = `${"Ho " .repeat(numeroSorteado)}!`
   return (
     <div>

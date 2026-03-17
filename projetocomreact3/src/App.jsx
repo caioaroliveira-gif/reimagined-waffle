@@ -3,6 +3,9 @@ import './App.css'
 import Evento from './components/Evento';
 import Pneu from './components/Pneu';
 import PapaiNoel from './components/PapaiNoel';
+import Media from './components/Media';
+import Bondinho from './components/Bondinho';
+import Pum from './components/Pum';
 
 function App() {
   const [InputNome, setInputNome] = useState('')
@@ -26,6 +29,12 @@ function App() {
       <Pneu />
       <hr />
       <PapaiNoel />
+      <hr />
+      <Media />
+      <hr />
+      <Bondinho />
+      <hr />
+      <Pum />
     </>
   )
 }
