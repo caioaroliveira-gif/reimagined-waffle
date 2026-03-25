@@ -6,6 +6,9 @@ import PapaiNoel from './components/PapaiNoel';
 import Media from './components/Media';
 import Bondinho from './components/Bondinho';
 import Pum from './components/Pum';
+import PostoDeCombustivel from './components/PostoDeCombustivel';
+import Lesmas from './components/Lesmas';
+import CinemadaVovo from './components/CinemadaVovo';
 
 function App() {
   const [InputNome, setInputNome] = useState('')
@@ -35,6 +38,12 @@ function App() {
       <Bondinho />
       <hr />
       <Pum />
+      <hr />
+      <PostoDeCombustivel />
+      <hr />
+      <Lesmas />
+      <hr />
+      <CinemadaVovo />
     </>
   )
 }
