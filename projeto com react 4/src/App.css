@@ -8,10 +8,26 @@
 .cont-header {
   background-color: aquamarine;
   height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .cont-main {
   background-color: bisque;
   flex: 1;
+  display: flex;
+}
+
+.botoes-nav {
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(165, 42, 42, 0);
+}
+
+.botoes-nav:hover {
+  background-color: rgba(238, 255, 0, 0.863)
 }
 
