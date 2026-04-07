@@ -1,0 +1,123 @@
+/* Reset básico para garantir que o layout funcione igual em todo navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container principal ocupando toda a tela */
+.cont-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa; /* Fundo cinza bem clarinho */
+  color: #333;
+}
+
+/* Estilização do Cabeçalho (Menu) */
+.cont-header {
+  background-color: #ff5722; /* Laranja apetitoso (tema de comida) */
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar o cabeçalho */
+}
+
+.cont-header nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap; /* Permite que os botões quebrem de linha em telas pequenas */
+}
+
+/* Estilo dos Botões de Navegação */
+.botoes-nav {
+  background-color: #ffffff;
+  color: #ff5722;
+  border: none;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px; /* Deixa os botões em formato de "pílula" */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transição suave para o efeito hover */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.botoes-nav:hover {
+  background-color: #ffd5c2;
+  transform: translateY(-3px); /* Efeito de flutuar ao passar o mouse */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Área central onde o conteúdo será renderizado */
+.cont-main {
+  flex: 1; /* Faz o main ocupar todo o espaço restante da tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Estilo base "Card" para todas as páginas (Home e Restaurantes) */
+.cont-home,
+.cont-jessica,
+.cont-ceralBar,
+.cont-pizza {
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* Efeito de cartão flutuante */
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  animation: fadeIn 0.5s ease-in-out; /* Animação ao trocar a tela no useState */
+}
+
+/* Tipografia e Elementos Internos */
+h1 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+hr {
+  border: 0;
+  height: 3px;
+  background-color: #ff5722;
+  width: 60px; /* Linha curta para dar um toque de design */
+  margin: 1.5rem auto;
+  border-radius: 2px;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Estilização das Imagens */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px; /* Bordas arredondadas nas imagens */
+  margin-top: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.02); /* Leve zoom ao passar o mouse na imagem */
+}
+
+/* Animação Suave para o useState */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
