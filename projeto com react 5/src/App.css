@@ -14,6 +14,7 @@
   padding: 16px;
   width: 180px;
   text-align: left;
+  
 }
 
 .card h3 {
@@ -44,4 +45,25 @@
 
 section {
   padding: 20px;
+}
+
+.card-card-carro {
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 8px;
+  padding: 16px;
+  width: 180px;
+  text-align: left;
+  height: 180px;
+}
+
+.card-card-carro h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: var(--text-h);
+}
+
+.card-card-carro p {
+  font-size: 14px;
+  margin: 4px 0;
 }

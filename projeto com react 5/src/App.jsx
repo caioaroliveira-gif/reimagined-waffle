@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
+
   const [cavalos, setCavalos] = useState([
     { id: 11, nome: "Trovão", raca: "Mangalarga Marchador", idade: 5, pelagem: "Tordilho" },
     { id: 12, nome: "Pérola", raca: "Quarto de Milha", idade: 4, pelagem: "Alazã" },
@@ -54,6 +55,115 @@ function App() {
     { id: 209, nome: "Snubbull", imagem: "https://img.pokemondb.net/sprites/home/normal/snubbull.png" }
   ])
 
+  const [viagens, setViagens] = useState([
+    { id: 300, origem: "São Paulo", destino: "Tóquio", tempo: "24h", model: "Boeing 777", custo: 6500.00 },
+    { id: 301, origem: "Rio de Janeiro", destino: "Paris", tempo: "11h", model: "Airbus A350", custo: 4200.00 },
+    { id: 302, origem: "Curitiba", destino: "Buenos Aires", tempo: "2h", model: "Embraer 195", custo: 1200.00 },
+    { id: 303, origem: "Salvador", destino: "Lisboa", tempo: "9h", model: "Airbus A330neo", custo: 3800.00 },
+    { id: 304, origem: "Belo Horizonte", destino: "Nova York", tempo: "10h", model: "Boeing 787", custo: 4900.00 },
+    { id: 305, origem: "Florianópolis", destino: "Montevidéu", tempo: "1h45", model: "Boeing 737", custo: 950.00 },
+    { id: 306, origem: "Manaus", destino: "Miami", tempo: "5h30", model: "Airbus A321", custo: 2100.00 },
+    { id: 307, origem: "Brasília", destino: "Londres", tempo: "12h", model: "Boeing 777", custo: 5100.00 },
+    { id: 308, origem: "Recife", destino: "Madri", tempo: "8h", model: "Airbus A340", custo: 3600.00 },
+    { id: 309, origem: "Porto Alegre", destino: "Santiago", tempo: "3h", model: "Airbus A320", custo: 1100.00 }
+  ])
+
+  const [notas, setNotas] = useState([
+    { id: 400, materia: "Cálculo I", nota: 4.5, desculpa: "O professor usou letras onde deveriam estar números." },
+    { id: 401, materia: "História", nota: 9.0, desculpa: "Sou o melior" },
+    { id: 402, materia: "Física", nota: 3.0, desculpa: "A gravidade não colaborou no dia da prova prática." },
+    { id: 403, materia: "Literatura", nota: 8.5, desculpa: "É os guri não tem jeito" },
+    { id: 404, materia: "Química", nota: 5.5, desculpa: "Inalei muito hélio e esqueci a tabela periódica." },
+    { id: 405, materia: "Geografia", nota: 7.2, desculpa: "Dormi mal" },
+    { id: 406, materia: "Biologia", nota: 6.0, desculpa: "Fiquei com pena de dissecar o sapo e me desconcentrei." },
+    { id: 407, materia: "Filosofia", nota: 10, desculpa: "Quem é Jimmy Neutron perto de mim" },
+    { id: 408, materia: "Inglês", nota: 4.0, desculpa: "O sotaque do áudio parecia um alienígena mastigando chiclete." },
+    { id: 409, materia: "Artes", nota: 6.8, desculpa: "Minha visão artística está à frente do tempo do professor." }
+  ])
+
+  const [kpops, setKpops] = useState([
+    {
+      id: 500,
+      nome: "BTS",
+      integrantes: 7,
+      empresa: "Big Hit (HYBE)",
+      anoDebut: 2013,
+      fandom: "ARMY"
+    },
+    {
+      id: 501,
+      nome: "Blackpink",
+      integrantes: 4,
+      empresa: "YG Entertainment",
+      anoDebut: 2016,
+      fandom: "BLINK"
+    },
+    {
+      id: 502,
+      nome: "Twice",
+      integrantes: 9,
+      empresa: "JYP Entertainment",
+      anoDebut: 2015,
+      fandom: "ONCE"
+    },
+    {
+      id: 503,
+      nome: "Stray Kids",
+      integrantes: 8,
+      empresa: "JYP Entertainment",
+      anoDebut: 2018,
+      fandom: "STAY"
+    },
+    {
+      id: 504,
+      nome: "NewJeans",
+      integrantes: 5,
+      empresa: "ADOR (HYBE)",
+      anoDebut: 2022,
+      fandom: "Bunnies"
+    },
+    {
+      id: 505,
+      nome: "EXO",
+      integrantes: 9,
+      empresa: "SM Entertainment",
+      anoDebut: 2012,
+      fandom: "EXO-L"
+    },
+    {
+      id: 506,
+      nome: "Red Velvet",
+      integrantes: 5,
+      empresa: "SM Entertainment",
+      anoDebut: 2014,
+      fandom: "ReVeluv"
+    },
+    {
+      id: 507,
+      nome: "Seventeen",
+      integrantes: 13,
+      empresa: "Pledis (HYBE)",
+      anoDebut: 2015,
+      fandom: "Carat"
+    },
+    {
+      id: 508,
+      nome: "IVE",
+      integrantes: 6,
+      empresa: "Starship Entertainment",
+      anoDebut: 2021,
+      fandom: "DIVE"
+    },
+    {
+      id: 509,
+      nome: "ATEEZ",
+      integrantes: 8,
+      empresa: "KQ Entertainment",
+      anoDebut: 2018,
+      fandom: "ATINY"
+    }
+  ])
+ 
   return (
     <>
       <h1>Cards de Coisas</h1>
@@ -76,7 +186,7 @@ function App() {
         <h2>🚗 Carros Clássicos</h2>
         <div className="listaCards">
           {carros.map((carro) => (
-            <div className="card" key={carro.id}>
+            <div className="card-card-carro" key={carro.id}>
               <h3>{carro.modelo}</h3>
               <p><strong>Marca:</strong> {carro.marca}</p>
               <p><strong>Ano:</strong> {carro.ano}</p>
@@ -112,6 +222,39 @@ function App() {
               <p>{poke.nome}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section>
+        <h2>✈️ Viagens</h2>
+        <div className="listaCards">
+          {viagens.map((viagem) => (
+            <div className="card card-viagens" key={viagem.id}>
+              <h3>{viagem.origens}</h3>
+              <p><strong>Origem:</strong> {viagem.origem}</p>
+              <p><strong>Destino:</strong> {viagem.destino}</p>
+              <p><strong>Tempo:</strong> {viagem.tempo}</p>
+              <p><strong>Avião:</strong> {viagem.model}</p>
+              <p><strong>Custo:R$</strong> {viagem.custo}</p>
+
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <h2>💯 Notas</h2>
+        <div className="listaCards">
+        {notas.map((nota) => (
+          <div className="card card-nota" key={nota.id}>
+          <h3>{nota.materia}</h3>
+          <p><strong>Nota:</strong>{nota.nota}</p>
+          <p><strong>Desculpa:</strong>{nota.desculpa}</p>
+
+
+          </div>
+        ))}
+
         </div>
       </section>
     </>
